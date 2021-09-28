@@ -53,7 +53,14 @@ GROUP BY year(enrolment_date);
 
 -- contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
+SELECT count(id) ,office_address
+FROM `teachers`
+GROUP BY office_address;
+
 -- calcolare la media dei voti di ogni appello d'esame
+SELECT round(AVG(vote),2) as `media`, exam_id
+FROM `exam_student`
+GROUP BY exam_id;
 
 
 -- contare quanti corsi di laurea ci sono per ogni dipartimento

@@ -43,3 +43,20 @@ SELECT count(*)
 FROM `teachers`
 where phone IS NULL;
 
+-- ---------------------------------- scheda 2  
+
+-- contare quanti iscritti ci sono stati ogni anno
+SELECT count(id) AS `iscritti`, YEAR(enrolment_date)
+FROM `students`
+GROUP BY year(enrolment_date);
+
+
+-- contare gli insegnanti che hanno l'ufficio nello stesso edificio
+
+-- calcolare la media dei voti di ogni appello d'esame
+
+
+-- contare quanti corsi di laurea ci sono per ogni dipartimento
+SELECT count(id) 
+FROM `degrees`;
+

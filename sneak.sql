@@ -26,13 +26,20 @@ WHERE year = '1' and period = 'I semestre';
 
 SELECT * 
 FROM `exams`
-WHERE date = '2020-06-20' AND hour > '14:00:00'
+WHERE date = '2020-06-20' AND hour > '14:00:00';
 
 --selezionare tutti i corsi di laurea magistrale
 
 SELECT * 
 FROM `degrees`
-WHERE level = 'magistrale'
+WHERE level = 'magistrale';
 
--- 
+-- da quanti dipartimenti e composta l'università
+SELECT count(id) 
+FROM `departments`;
+
+-- quanti sono gli insegnanti che non hanno un  numero di telefono
+SELECT count(*) 
+FROM `teachers`
+where phone IS NULL;
 

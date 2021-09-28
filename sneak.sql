@@ -2,7 +2,7 @@
 
 SELECT * 
 FROM `students`
-WHERE date_of_birth LIKE '1990%';
+WHERE year(date_of_birth) LIKE 1990%;
 
 -- selezionare tutti i corsi che valgono piu di 10 crediti
 
@@ -14,7 +14,7 @@ WHERE cfu >= '10';
 
 SELECT * 
 FROM `students` 
-WHERE year(date_of_birth) < '1991';
+WHERE year(date_of_birth) < 1991;
 
 -- selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea
 
@@ -27,3 +27,12 @@ WHERE year = '1' and period = 'I semestre';
 SELECT * 
 FROM `exams`
 WHERE date = '2020-06-20' AND hour > '14:00:00'
+
+--selezionare tutti i corsi di laurea magistrale
+
+SELECT * 
+FROM `degrees`
+WHERE level = 'magistrale'
+
+-- 
+
